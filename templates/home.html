@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obesity Index Prediction</title>
+</head>
+<body bgcolor=#a3cfb4>
+    <h1>Obesity Index Prediction</h1>
+
+    <!-- Request Fields -->
+    <form method="POST", action="{{url_for('prediction')}}">
+        <label for="lowConfidenceLimit">Low Confidence Limit:</label>
+        <input type="number", id="lowConfidenceLimit", name="lowConfidenceLimit", step="0.1", min="0.3", max="69.5" required><br>
+
+        <label for="sampleSize">Sample Size:</label>
+        <input type="number", id="sampleSize", name="sampleSize", step="1", min="50", max="476876" required><br>
+
+
+        <label for="class">Class:</label>
+        <select id="class" name="class">
+            <option value="Obesity / Weight Status">Obesity / Weight Status</option>
+            <option value="Fruits and Vegetables">Fruits and Vegetables</option>
+            <option value="Physical Activity">Physical Activity</option>
+        </select><br>
+
+        <label for="topic">Topic:</label>
+        <select id="topic" name="topic">
+            <option value="Obesity / Weight Status">Obesity / Weight Status</option>
+            <option value="Fruits and Vegetables - Behavior">Fruits and Vegetables - Behavior</option>
+            <option value="Physical Activity - Behavior">Physical Activity - Behavior</option>
+        </select><br>
+
+        <!-- Predict Button -->
+
+        <input type="submit" , value='predict' >
+    </form>
+
+    <script>
+        function predictObesityIndex() {
+            // You can add logic to handle the prediction here
+            alert("Prediction logic to be implemented.");
+        }
+    </script>
+</body>
+</html>
